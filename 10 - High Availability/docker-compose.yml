@@ -1,0 +1,43 @@
+services:
+  mysql-primary:
+    image: mysql/mysql-server:8.0
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: mydatabase
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-primary-data:/var/lib/mysql
+    networks:
+      - mysql-net
+    command: ["--server-id=1", "--log-bin=mysql-bin", "--gtid-mode=ON", "--enforce-gtid-consistency", "--log-slave-updates=ON", "--report-host=mysql-primary"]
+
+  mysql-secondary:
+    image: mysql/mysql-server:8.0
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: mydatabase
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
+    volumes:
+      - mysql-secondary-data:/var/lib/mysql
+    networks:
+      - mysql-net
+    command: ["--server-id=2", "--log-bin=mysql-bin", "--gtid-mode=ON", "--enforce-gtid-consistency", "--log-slave-updates=ON", "--report-host=mysql-secondary"]
+
+volumes:
+  mysql-primary-data:
+  mysql-secondary-data:
+
+networks:
+  mysql-net:

@@ -1,32 +1,32 @@
-[1 - Quick Start](1%20-%20Quick%20Start)
+[1-Quick Start](1-Quick%20Start)
 
-[2 - Data Modeling](2%20-%20Data%20Modeling)
+[2-Data Modeling](2-Data%20Modeling)
 
-[3 - DDL, DML, DCL](3%20-%20DDL%2C%20DML%2C%20DCL)
+[3-DDL, DML, DCL, TCL](3-DDL%2C%20DML%2C%20DCL%2C%20TCL)
 
-[4 - Stored Procedures e Functions](4%20-%20Stored%20Procedures%20e%20Functions)
+[4-Stored Procedures e Functions](4-Stored%20Procedures%20e%20Functions)
 
-[5 - Triggers](5%20-%20Triggers)
+[5-Triggers](5-Triggers)
 
-[6 - Views](6%20-%20Views)
+[6-Views](6-Views)
 
-[7 - Indexes](7%20-%20Indexes)
+[7-Indexes](7-Indexes)
 
-[8 - Transactions](8%20-%20Transactions)
+[8-Transactions](8-Transactions)
 
-[9 - Security](9%20-%20Security)
+[9-Security](9-Security)
 
-[10 - High Availability](10%20-%20High%20Availability)
+[10-High Availability](10-High%20Availability)
 
-[11 - Administration Tools](11%20-%20Administration%20Tools)
+[11-Administration Tools](11-Administration%20Tools)
 
-[12 - Performance Tuning](12%20-%20Performance%20Tuning)
+[12-Performance Tuning](12-Performance%20Tuning)
 
-[13 - Backup and Recover](13%20-%20Backup%20and%20Recover)
+[13-Backup and Recover](13-Backup%20and%20Recover)
 
-[14 - Monitoring](14%20-%20Monitoring)
+[14-Monitoring](14-Monitoring)
 
-[15 - Deployment](15%20-%20Deployment)
-- [compose](15%20-%20Deployment%2Fcompose)
-- [k8s](15%20-%20Deployment%2Fk8s)
-- [swarm](15%20-%20Deployment%2Fswarm)
+[15-Deployment](15-Deployment)
+- [compose](15-Deployment%2Fcompose)
+- [k8s](15-Deployment%2Fk8s)
+- [swarm](15-Deployment%2Fswarm)    

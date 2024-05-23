@@ -7,7 +7,7 @@
 
 - **Imagem**: Utiliza a imagem mais recente do MySQL disponível no Docker Hub.
 
-- **0ome do Contêiner**: O contêiner será chamado de mysql.
+- **Nome do Contêiner**: O contêiner será chamado de mysql.
 - **Reinicialização Automática**: Configurado para reiniciar sempre que o Docker reiniciar.
 - **Variáveis de Ambiente**:
   - **MYSQL_DATABASE**: Define o nome do banco de dados como store.

@@ -109,7 +109,7 @@ Esses são os principais aspectos da Linguagem de Definição de Dados (DDL) que
 
 ## Exemplo: Store
 
-Neste README, vamos explorar um conjunto de comandos SQL que exemplificam a criação de tabelas, a adição de chaves estrangeiras e a definição de integridade referencial em um banco de dados relacional. Vamos usar como exemplo um modelo simples de e-commerce, com tabelas para usuários, perfis de usuário, categorias de produtos, produtos, métodos de pagamento, pedidos e itens de pedido.
+Vamos explorar um conjunto de comandos SQL que exemplificam a criação de tabelas, a adição de chaves estrangeiras e a definição de integridade referencial em um banco de dados relacional. Vamos usar como exemplo um modelo simples de e-commerce, com tabelas para usuários, perfis de usuário, categorias de produtos, produtos, métodos de pagamento, pedidos e itens de pedido.
 
 ### Criação de Tabelas
 

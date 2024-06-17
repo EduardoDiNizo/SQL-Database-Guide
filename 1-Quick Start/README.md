@@ -1,66 +1,30 @@
-## Quick Start: Subindo um Servidor MySQL no Docker
+# Quick Start
 
-MySQL é um sistema de gerenciamento de banco de dados relacional (RDBMS) de código aberto amplamente utilizado. Ele fornece um ambiente robusto e confiável para armazenar e gerenciar dados, oferecendo suporte a recursos como transações ACID, índices, chaves estrangeiras e muito mais. MySQL é conhecido por sua velocidade, escalabilidade e facilidade de uso, tornando-o uma escolha popular para aplicativos da web e outras aplicações que exigem armazenamento e recuperação eficientes de dados.
+Esta seção fornece guias rápidos para configurar e subir diversos sistemas de gerenciamento de banco de dados (RDBMS) usando Docker. Cada seção contém instruções detalhadas para subir um servidor de banco de dados específico e conectar-se a ele. Docker é uma ferramenta de containerização que facilita a implantação e execução de serviços, garantindo um ambiente consistente e portável.
 
-Nesta seção, vamos aprender como subir um servidor MySQL básico no Docker. O Docker é uma ferramenta de containerização que permite empacotar e distribuir aplicativos em contêineres, tornando a implantação e a execução de serviços mais fáceis e rápidas.
+## [db2](db2/README.md)
+IBM Db2 é um sistema de gerenciamento de banco de dados relacional robusto e escalável, ideal para ambientes empresariais. Ele oferece suporte a transações ACID, segurança avançada e integração com outras soluções da IBM. Neste guia, aprenderemos a subir um servidor Db2 usando Docker.
 
-### Requisitos
-- Certifique-se de ter o Docker instalado no seu sistema. Se você ainda não tem o Docker instalado, siga as instruções de instalação para o seu sistema operacional no site oficial do Docker: https://docs.docker.com/get-docker/.
+## [mariadb](mariadb/README.md)
+MariaDB é um sistema de gerenciamento de banco de dados relacional derivado do MySQL. Ele é conhecido por sua robustez, escalabilidade e conformidade com os padrões SQL. Este guia mostra como configurar e subir um servidor MariaDB básico utilizando Docker.
 
-### Utilizando Docker Compose
-Para subir o servidor MySQL, você pode utilizar o arquivo docker-compose.yml abaixo. Certifique-se de ter este arquivo no diretório onde você deseja executar o servidor MySQL:
+## [mysql](mysql/README.md)
+MySQL é um dos sistemas de gerenciamento de banco de dados relacional mais populares do mundo, conhecido por sua velocidade, escalabilidade e facilidade de uso. Aqui, você aprenderá a subir um servidor MySQL básico usando Docker e Docker Compose.
 
-````yaml
-services:
-  mysql:
-    image: mysql:latest
-    container_name: mysql
-    restart: always
-    environment:
-      MYSQL_DATABASE: store
-      MYSQL_USER: store_admin
-      MYSQL_PASSWORD: "!StringP@ssw@rd"
-      MYSQL_ROOT_PASSWORD: "!StringP@ssw@rd"
-    ports:
-      - "3306:3306"
-    volumes:
-      - mysql_data:/var/lib/mysql
+## [oracle](oracle/README.md)
+Oracle Database é um sistema de gerenciamento de banco de dados relacional amplamente utilizado em ambientes empresariais devido às suas capacidades avançadas de gerenciamento de dados e segurança. Este guia mostra como configurar e subir um servidor Oracle Database básico usando Docker.
 
-volumes:
-  mysql_data:
-    driver: local
+## [postgres](postgres/README.md)
+PostgreSQL é um sistema de gerenciamento de banco de dados relacional avançado, conhecido por sua conformidade com os padrões SQL e suporte a funcionalidades avançadas como extensões e transações ACID. Este guia mostra como subir um servidor PostgreSQL básico usando Docker.
 
-````
-Este arquivo docker-compose.yml define um serviço MySQL usando Docker Compose. O serviço é configurado com as seguintes características:
+## [sqlite](sqlite/README.md)
+SQLite é um sistema de gerenciamento de banco de dados relacional leve e embutido, ideal para desenvolvimento, testes e pequenas aplicações. Este guia demonstra como usar o SQLite em um contêiner Docker.
 
+## [sqlserver](sqlserver/README.md)
+Microsoft SQL Server é um sistema de gerenciamento de banco de dados relacional robusto, utilizado amplamente em ambientes empresariais devido às suas funcionalidades avançadas e integração com o ecossistema Microsoft. Este guia mostra como configurar e subir um servidor SQL Server básico usando Docker.
 
-- **Imagem**: Utiliza a imagem mais recente do MySQL disponível no Docker Hub.
+---
 
-- **Nome do Contêiner**: O contêiner será chamado de mysql.
-- **Reinicialização Automática**: Configurado para reiniciar sempre que o Docker reiniciar.
-- **Variáveis de Ambiente**:
-  - **MYSQL_DATABASE**: Define o nome do banco de dados como store.
-  - **MYSQL_USER**: Define o usuário do banco de dados como store_admin.
-  - **MYSQL_PASSWORD**: Define a senha do usuário do banco de dados como !StringP@ssw@rd.
-  - **MYSQL_ROOT_PASSWORD**: Define a senha do usuário root do MySQL como !StringP@ssw@rd.
+Cada seção contém um arquivo `docker-compose.yml` e instruções detalhadas para subir o servidor de banco de dados correspondente. Certifique-se de ter o Docker instalado no seu sistema antes de começar. Se você ainda não tem o Docker instalado, siga as instruções de instalação para o seu sistema operacional no site oficial do Docker: [Instalar Docker](https://docs.docker.com/get-docker/).
 
-- **Portas**: Mapeia a porta 3306 do contêiner MySQL para a porta 3306 do host, permitindo acesso ao banco de dados.
-
-- **Volumes**: Monta um volume chamado mysql_data para armazenar os dados do banco de dados MySQL de forma persistente no host.
-
-### Subindo o Servidor MySQL
-
-````shell
-docker-compose up -d
-````
-
-### Conectando-se ao Servidor MySQL
-
-Para se conectar ao servidor MySQL, você pode usar ferramentas como o MySQL Workbench ou o cliente MySQL na linha de comando. Use as seguintes informações de conexão:
-
-- Host: localhost
-- Porta: 3306
-- Usuário: store_admin
-- Senha: !StringP@ssw@rd
-- Banco de Dados: store
-
+Explore cada seção para configurar e utilizar o banco de dados que melhor atende às suas necessidades.

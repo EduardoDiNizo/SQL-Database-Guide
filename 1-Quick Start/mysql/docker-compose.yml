@@ -1,0 +1,18 @@
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: store
+      MYSQL_USER: store_admin
+      MYSQL_PASSWORD: "!StringP@ssw@rd"
+      MYSQL_ROOT_PASSWORD: "!StringP@ssw@rd"
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
+    driver: local

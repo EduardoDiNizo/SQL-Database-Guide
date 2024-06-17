@@ -1,0 +1,18 @@
+services:
+  oracle:
+    image: oracleinanutshell/oracle-xe-11g:latest
+    container_name: oracle
+    restart: always
+    environment:
+      ORACLE_DATABASE: ORCL
+      ORACLE_USER: oracle_admin
+      ORACLE_PASSWORD: "!StringP@ssw@rd"
+      ORACLE_CHARACTERSET: AL32UTF8
+    ports:
+      - "1521:1521"
+    volumes:
+      - oracle_data:/u01/app/oracle
+
+volumes:
+  oracle_data:
+    driver: local

@@ -145,24 +145,24 @@ A modelagem física é a etapa de implementação do modelo lógico em um sistem
 ### Componentes da Modelagem Física
 
 1. **Tabelas e Colunas**:
-  - **Definição das Tabelas**: As tabelas são criadas conforme definido no modelo lógico. Cada tabela representa uma entidade do modelo, com colunas correspondentes aos atributos da entidade.
-  - **Tipos de Dados**: A escolha do tipo de dado apropriado para cada coluna é crucial para otimizar o armazenamento e o desempenho. Por exemplo, usar tipos de dados numéricos para valores numéricos, tipos de dados de data para valores de data, e assim por diante.
+   - **Definição das Tabelas**: As tabelas são criadas conforme definido no modelo lógico. Cada tabela representa uma entidade do modelo, com colunas correspondentes aos atributos da entidade.
+   - **Tipos de Dados**: A escolha do tipo de dado apropriado para cada coluna é crucial para otimizar o armazenamento e o desempenho. Por exemplo, usar tipos de dados numéricos para valores numéricos, tipos de dados de data para valores de data, e assim por diante.
 
 2. **Índices**:
-  - **Criação de Índices**: Índices são criados para acelerar a recuperação de dados. Eles são especialmente úteis em colunas frequentemente usadas em cláusulas WHERE, JOIN, e ORDER BY.
-  - **Tipos de Índices**: Diferentes tipos de índices (como B-tree, hash, bitmap) podem ser usados dependendo das necessidades específicas. Índices compostos podem ser criados em múltiplas colunas para otimizar consultas complexas.
+   - **Criação de Índices**: Índices são criados para acelerar a recuperação de dados. Eles são especialmente úteis em colunas frequentemente usadas em cláusulas WHERE, JOIN, e ORDER BY.
+   - **Tipos de Índices**: Diferentes tipos de índices (como B-tree, hash, bitmap) podem ser usados dependendo das necessidades específicas. Índices compostos podem ser criados em múltiplas colunas para otimizar consultas complexas.
 
 3. **Particionamento**:
-  - **Particionamento Horizontal**: Dividir uma tabela em várias tabelas menores com base em um valor de chave, como datas ou intervalos numéricos. Isso pode melhorar o desempenho de consultas e simplificar a manutenção de dados.
-  - **Particionamento Vertical**: Separar colunas de uma tabela em tabelas diferentes. Isso pode ser útil para otimizar o acesso a colunas específicas ou para gerenciar colunas de dados muito grandes.
+   - **Particionamento Horizontal**: Dividir uma tabela em várias tabelas menores com base em um valor de chave, como datas ou intervalos numéricos. Isso pode melhorar o desempenho de consultas e simplificar a manutenção de dados.
+   - **Particionamento Vertical**: Separar colunas de uma tabela em tabelas diferentes. Isso pode ser útil para otimizar o acesso a colunas específicas ou para gerenciar colunas de dados muito grandes.
 
 4. **Conformidade e Integridade**:
-  - **Constraints**: Restrições como chaves primárias, chaves estrangeiras, unique constraints e check constraints são implementadas para garantir a integridade dos dados.
-  - **Triggers**: Procedimentos armazenados que são executados automaticamente em resposta a certos eventos, como inserções, atualizações ou exclusões, para garantir regras de negócios e integridade dos dados.
+   - **Constraints**: Restrições como chaves primárias, chaves estrangeiras, unique constraints e check constraints são implementadas para garantir a integridade dos dados.
+   - **Triggers**: Procedimentos armazenados que são executados automaticamente em resposta a certos eventos, como inserções, atualizações ou exclusões, para garantir regras de negócios e integridade dos dados.
 
 5. **Otimizações Específicas**:
-  - **Armazenamento e Compressão**: Utilização de técnicas de compressão de dados para economizar espaço de armazenamento e melhorar a performance de I/O.
-  - **Tuning de Performance**: Ajustes específicos no SGBD, como configuração de buffers de memória, parâmetros de cache, e otimização de planos de execução de consultas.
+   - **Armazenamento e Compressão**: Utilização de técnicas de compressão de dados para economizar espaço de armazenamento e melhorar a performance de I/O.
+   - **Tuning de Performance**: Ajustes específicos no SGBD, como configuração de buffers de memória, parâmetros de cache, e otimização de planos de execução de consultas.
 
 ### Exemplos Práticos
 
@@ -204,32 +204,32 @@ CREATE TABLE Order_2023_02 PARTITION OF Order FOR VALUES FROM ('2023-02-01') TO 
 Existem diversas ferramentas de modelagem de dados disponíveis que ajudam a criar, visualizar e documentar modelos de dados. Essas ferramentas facilitam o processo de design e garantem que os modelos sejam bem documentados e consistentes. Aqui estão algumas das ferramentas de modelagem de dados mais populares:
 
 1. **ER/Studio**:
-  - **Descrição**: Ferramenta robusta de modelagem de dados que oferece recursos avançados para design e documentação de modelos de dados.
-  - **Características**: Suporte a modelagem lógica e física, engenharia reversa, comparação de modelos, e geração de scripts de banco de dados.
+   - **Descrição**: Ferramenta robusta de modelagem de dados que oferece recursos avançados para design e documentação de modelos de dados.
+   - **Características**: Suporte a modelagem lógica e física, engenharia reversa, comparação de modelos, e geração de scripts de banco de dados.
 
 2. **Oracle SQL Developer Data Modeler**:
-  - **Descrição**: Ferramenta gratuita da Oracle para modelagem de dados, integrada ao Oracle SQL Developer.
-  - **Características**: Suporte a modelagem lógica, relacional e física, engenharia reversa e sincronização de modelos com bancos de dados.
+   - **Descrição**: Ferramenta gratuita da Oracle para modelagem de dados, integrada ao Oracle SQL Developer.
+   - **Características**: Suporte a modelagem lógica, relacional e física, engenharia reversa e sincronização de modelos com bancos de dados.
 
 3. **Microsoft Visio**:
-  - **Descrição**: Ferramenta de diagramas amplamente utilizada que também oferece suporte à modelagem de dados.
-  - **Características**: Suporte a diagramas ERD (Entity-Relationship Diagrams), integração com bancos de dados via ODBC, e geração de diagramas de banco de dados.
+   - **Descrição**: Ferramenta de diagramas amplamente utilizada que também oferece suporte à modelagem de dados.
+   - **Características**: Suporte a diagramas ERD (Entity-Relationship Diagrams), integração com bancos de dados via ODBC, e geração de diagramas de banco de dados.
 
 4. **DBDesigner**:
   - **Descrição**: Ferramenta de design visual de banco de dados com suporte a vários SGBDs.
   - **Características**: Interface intuitiva, suporte a engenharia reversa e direta, e integração com MySQL.
 
 5. **Toad Data Modeler**:
-  - **Descrição**: Ferramenta de modelagem de dados que suporta uma ampla gama de SGBDs e oferece recursos avançados de design.
-  - **Características**: Modelagem lógica e física, engenharia reversa, validação de modelo, e geração de scripts de banco de dados.
+   - **Descrição**: Ferramenta de modelagem de dados que suporta uma ampla gama de SGBDs e oferece recursos avançados de design.
+   - **Características**: Modelagem lógica e física, engenharia reversa, validação de modelo, e geração de scripts de banco de dados.
 
 6. **MySQL Workbench**:
-  - **Descrição**: Ferramenta integrada para design de banco de dados, desenvolvimento SQL, administração e modelagem de dados para MySQL.
-  - **Características**: Suporte a engenharia reversa e direta, design de diagramas ER, e geração de scripts SQL.
+   - **Descrição**: Ferramenta integrada para design de banco de dados, desenvolvimento SQL, administração e modelagem de dados para MySQL.
+   - **Características**: Suporte a engenharia reversa e direta, design de diagramas ER, e geração de scripts SQL.
 
 7. **Lucidchart**:
-  - **Descrição**: Ferramenta online de diagramas que oferece suporte à criação de diagramas ERD e modelagem de dados.
-  - **Características**: Colaboração em tempo real, templates de diagramas, e integração com várias plataformas de armazenamento em nuvem.
+   - **Descrição**: Ferramenta online de diagramas que oferece suporte à criação de diagramas ERD e modelagem de dados.
+   - **Características**: Colaboração em tempo real, templates de diagramas, e integração com várias plataformas de armazenamento em nuvem.
 
 Cada uma dessas ferramentas oferece recursos distintos que podem ser escolhidos com base nas necessidades específicas do projeto e do SGBD em uso. Utilizar ferramentas de modelagem de dados é essencial para garantir que os modelos sejam bem projetados, documentados e mantidos ao longo do tempo.
 

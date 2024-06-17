@@ -216,8 +216,8 @@ Existem diversas ferramentas de modelagem de dados disponíveis que ajudam a cri
    - **Características**: Suporte a diagramas ERD (Entity-Relationship Diagrams), integração com bancos de dados via ODBC, e geração de diagramas de banco de dados.
 
 4. **DBDesigner**:
-  - **Descrição**: Ferramenta de design visual de banco de dados com suporte a vários SGBDs.
-  - **Características**: Interface intuitiva, suporte a engenharia reversa e direta, e integração com MySQL.
+   - **Descrição**: Ferramenta de design visual de banco de dados com suporte a vários SGBDs.
+   - **Características**: Interface intuitiva, suporte a engenharia reversa e direta, e integração com MySQL.
 
 5. **Toad Data Modeler**:
    - **Descrição**: Ferramenta de modelagem de dados que suporta uma ampla gama de SGBDs e oferece recursos avançados de design.
